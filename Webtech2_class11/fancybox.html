@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title></title>
+		
+		<script src ="js\jquery-3.4.1.js"></script>
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> -->
+		<script src ="js\jquery.fancybox-1.3.4.pack.js"></script>
+		<script src ="js\jquery.mousewheel-3.0.4.pack.js"></script>
+		<link rel = "stylesheet" type = "text/css" href ="css\jquery.fancybox-1.3.4.css">
+		
+		<script>
+			$(document).ready(function() {
+			/*
+			*   Examples - images
+			*/
+
+			$("a#example1").fancybox();
+
+			$("a#example2").fancybox({
+				'transitionIn'	: 'elastic',
+				'transitionOut'	: 'elastic'
+			});
+
+			$("a#example3").fancybox({
+				'transitionIn'	: 'none',
+				'transitionOut'	: 'none'	
+			});
+			
+			$("a#example4").fancybox({
+				'transitionIn'	: 'none',
+				'transitionOut'	: 'none'	
+			});
+		});
+		</script>
+		
+	</head>
+	<style>
+		
+	</style>
+	<body>
+		
+		<a id="example1" href="images/download (1).jfif"><img alt="example1" src="images/download (1).jfif" /></a>
+		<a id="example2" href="images/download (2).jfif"><img alt="example1" src="images/download (2).jfif" /></a>
+		<a id="example3" href="images/download (3).jfif"><img alt="example1" src="images/download (3).jfif" /></a>
+		<a id="example4" href="images/download (4).jfif"><img alt="example1" src="images/download (4).jfif" /></a>
+
+
+	</body>
+</html>
+
+

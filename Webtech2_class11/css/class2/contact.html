@@ -1,0 +1,96 @@
+<html>
+    <head>
+		<link rel="stylesheet" href="C:\JavaScript\class2\css\doc.css">
+		<script>
+			function dosomething()
+				{   
+					var marksObtained = document.getElementById("totalMarks").value;
+					console.log(marksObtained);
+					
+					if(marksObtained <50)
+					{
+					document.getElementById("outputValue").innerHTML="You are failed";
+					}
+					
+					else if(marksObtained >50 && marksObtained <60)
+					{
+					document.getElementById("outputValue").innerHTML="Your grade is d";
+					}
+					
+					else if (marksObtained >60 && marksObtained <70 )
+					{
+					document.getElementById("outputValue").innerHTML="Your grade is c";
+					}
+					
+					else if (marksObtained >70 && marksObtained <80)
+					{
+					document.getElementById("outputValue").innerHTML = "Your grade is b";
+					}
+					
+					else if (marksObtained >80 && marksObtained <90)
+					{
+					document.getElementById("outputValue").innerHTML = "Your grade is a"
+					}
+					
+					else 
+					{
+					document.getElementById("outputValue").innerHTML = "Your grade is a+"
+					}
+					return false;
+						}
+					
+					/**var a= 5;
+					var b = 6;
+					var sum, multiply, div, sub;
+					sum = a+b; sub = a-b; multiply = a*b; div = a/b;
+					console.log(sum);
+					console.log(sub);
+					console.log(multiply);
+					console.log(div);
+					
+					console.log("button has been clicked");
+					alert("I clicked on do something");
+					return false;
+				}
+
+			function filesubmitted()
+				{
+				   alert("your file is submitted");
+					return false;*/
+				
+		</script>
+ 
+
+	</head>
+     <body>
+		<header>
+			<h1><center> First Webpage</center></h1>
+		</header>
+		<nav>
+			<a href ="default.html">default</a>
+			<a href ="about.html">about</a>
+		</nav>
+                 
+		<section>
+			<article>
+			   <form>
+					<p> Enter marks : <input type = "number" id= "totalMarks" name = "totalMarks" /> </p>
+					<p>Name:<input type="text" id="name" name="name" /></p>
+					
+					<p><input type="button" value="click me" onclick="dosomething();" /></p>
+					  <div id = "outputValue" name = "outputValue"> Grade will be shown here </div> 
+					
+			</article>
+		</section>
+        <footer>
+           <p>@Cestarcollege.com</p>
+        </footer>
+ 
+ 
+ 
+  </body>
+
+
+
+</html>
+
