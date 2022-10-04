@@ -1,0 +1,16 @@
+1. Download JQuery + JQueryUI
+2. Place js, css, images
+3. Reference
+4. Copy Html Code 
+	Follow Rules wigdets
+5. Call the wigdets
+
+
+
+$("").hide();
+$("").click(function(){
+$("").dialog({
+buttons: {
+"LOad More": function()
+}
+})

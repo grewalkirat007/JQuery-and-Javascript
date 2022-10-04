@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>Web Programming 2 - Class 5</title>
+	</head>
+	<style>
+		
+	</style>
+	<body>
+		<h1>Web Programming 2 - Class 5</h1>
+		<form id="calculate" name="calculate" action="join.html" method="get">
+			<label for="exam1">Exam 1</label>
+			<input type="number" id="exam1" min="1" max="25" /><span id="mark1">(1-25)</span><br>
+
+			<label for="exam2">Exam 2</label>
+			<input type="number" id="exam2" min="1" max="25" / ><span id="mark2">(1-25)</span><br>
+
+			<label for="project">Project</label>
+			<input type="number" id="project" min="1" max="100" /><span id="mark3">(1-100)--50%</span><br>
+
+			<span id="output"></span>
+			<br>
+			<span id="output1"></span>
+			<br>
+
+			<input type="submit" onclick="Calculate();return false;">
+
+		</form>
+		<footer>
+			<script>
+			function Calculate()
+			{
+				var exam1 = document.getElementById("exam1").value;
+				exam1 = parseFloat(exam1);//(1-25)
+
+				var exam2 = document.getElementById("exam2").value;
+				exam2 = parseFloat(exam2);//(1-25)
+
+				var project = document.getElementById("project").value;
+				project = parseFloat(project);//(1-100)--50%
+
+
+				var sum = (exam1+exam2+(project/2));
+				document.getElementById("output").innerHTML = sum;
+				if(sum>80)
+				{
+					document.getElementById("output1").innerHTML = "Grade A";
+				}
+				else if(sum>60 && sum<80)
+				{
+					document.getElementById("output1").innerHTML = "Grade B";
+				}
+				else
+				{
+					document.getElementById("output1").innerHTML = "Grade F";
+				}
+				
+				return false;
+				//80%>A
+				//60-80%>B
+				//60<F
+			}
+			
+		</script>
+		</footer>
+	</body>
+</html>
+
+

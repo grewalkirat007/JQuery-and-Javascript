@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>Web Programming 2 - Class 5</title>
+	</head>
+	<style>
+		
+	</style>
+	<body>
+		<h1>Web Programming 2 - Class 5</h1>
+		<form id="calculate" name="calculate" action="join.html" method="get">
+			<label for="exam1">Exam 1</label>
+			<input type="text" id="exam1" /><br>
+
+			<label for="exam2">Exam 2</label>
+			<input type="text" id="exam2" / ><br>
+
+			<label for="exam3">Exam 3</label>
+			<input type="text" id="exam3" /><br>
+
+			<span id="output"></span>
+			<br>
+
+			<input type="submit" onclick="Calculate();return false;">
+
+		</form>
+		<footer>
+			<script>
+			var numbers = []
+			numbers[0]=5;
+			numbers[1]=25;
+			numbers[2]=50;
+			alert(numbers);
+
+			//var sum = numbers[0] + numbers[1] + numbers[2];
+			//alert(sum);
+			var index, sum;
+			for(index=0;index<numbers.length;index++)
+			{
+				sum = sum + numbers[index];
+			}
+
+
+			var today = new Date();
+			alert(today);
+
+			var string = "Hello mr Edward John; how are you; hope doing good";
+			
+			</script>
+		</footer>
+	</body>
+</html>

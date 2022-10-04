@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	</head>
+	<style>
+			
+	</style>
+	<body>
+		<h1>Web Programming 2 - Class 4 - Validation</h1>
+		<form id="sign_up" name="sign_up" action="join.html" method="get">
+			<label for="first_name">Enter Your First Name:</label>
+			<input type="text" id="first_name" required /><br>
+			<label for="last_name">Enter Your Last Name:</label>
+			<input type="text" id="last_name" required /><br>
+			<label for="email_address">Enter Your Email Address:</label>
+			<input type="email" id="email_address" required /><br>
+			<label for="phone_number">Enter Your Phone:</label>
+			<input type="tel" id="phone_number" /><br>
+			<label for="age">Enter Your Age:</label>
+			<input type="number" id="age" required min="20" max="80" /><br>
+			<label for="date">Enter The Date:</label>
+			<input type="date" id="date" required /><br>
+			<label for="file">Upload The File:</label>
+			<input type="file" id="file" required /><br>
+			<label for="gender">Select Gender:</label><br>
+			<input type="radio" id="gender" value="male"/>Male<br>
+			<input type="radio" id="gender" value="female"/>Female<br>
+			<input type="radio" id="gender" value="other"/>Other<br>
+			<label for="range">Rating:</label>
+			<input type="range" id="range" required min="1" max="5"/><br>
+			<input type="submit" onclick="Validateme"><br>
+		</form>
+		radio checkbox 
+		<footer>
+			<script>
+				
+			</script>
+		</footer>
+	</body>
+</html>
+

@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>Web Programming 2 - Class 9 - JQuery Effects</title>
+		<script src="js\jquery-3.4.1.js"></script>
+		<script src="js\jquery-ui.js"></script>
+		<link rel="stylesheet" type="text/css" href="css\jquery-ui.css">
+		<script>
+			$( function() {
+				// $("#faqs h1").fadeOut(1000).fadeIn(10000);
+				// $("#faqs h2").fadeOut(5000).fadeIn(5000).fadeOut(5000).fadeIn(5000);
+				$("#faqs h1").animate({fontSize:"800%", color:"green", opacity:.8});
+				$("#faqs h2 a").animate({fontSize:"300%", color:"red", opacity:.5});
+				// $("#faqs h1").animate({fontSize:"800%",opacity:.8 },
+				// 10000, 
+				// "easeOutBounce",
+				// function()
+				// {
+				// 	$("h2 a").animate({fontSize:"200%",opacity:.5, color:"red" },5000, "easeOutBounce",function(){});
+					
+				// });
+			});
+			
+			
+			
+			// $( function() {
+			// 	$(" #faq h1 ").fadeOut(1000).fadeIn(10000);
+			// 	$(" #faq h2 ").fadeOut(5000).fadeIn(5000).fadeOut(5000).fadeIn(5000);
+			// 	$(" #faq h1 ").animate((fontSize:"800%",opacity:.8 )
+			// 	10000,
+			// 	"easeOutBounce",
+			// 	function()
+			// 	{
+			// 		$(" h2 a ").animate((fontSize:"200%",opacity:.5, color:"red"),5000,"easeOutBounce",function(){})
+			// 	})
+			// });
+		</script>
+	</head>
+	<style>
+		
+	</style>
+	<body>
+		<h1>Web Programming 2 - Class 9</h1>
+		<div id="faqs">
+			<h1>jQuery FAQs</h1>
+		
+			<h2><a href="#">What is jQuery?</a></h2>
+			<div>
+				JQuery is a javascript framework.......
+			</div>
+		</div>
+
+		<!-- <h1>Web Programming 2 - Class 9 - JQuery Effects</h1>
+		<div id="faq">
+			<h1>JQuery FAQs</h1>
+
+			<h2><a href="#">What is JQuery?</a></h2>
+			<div>
+				JQuery is a javascript framework.......
+			</div>
+		</div> -->
+		
+	</body>
+</html>
+
+

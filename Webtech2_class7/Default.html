@@ -1,0 +1,237 @@
+<html>
+	<head>
+		<title>Web Programming 2 - Class 7</title>
+		<script src="js\jquery-3.4.1.js"></script>
+		<script src="js\jquery-ui.js"></script>
+		<link rel="stylesheet" type="text/css" href="css\jquery-ui.css">
+		<script>
+			$(document).ready(function() {
+				$("#mydialog").hide();
+				$("#mydialog2").hide();
+				$("#btn").click(function(){
+					$( "#mydialog" ).dialog({
+					buttons: {
+						"Load More": function(){
+							$( "#mydialog2" ).dialog({
+								buttons: {
+									Cancel: function() {
+										$( this ).dialog( "close" );
+									}
+								}
+									
+							});
+
+						},
+						Cancel: function() {
+          								$( this ).dialog( "close" );
+        							}
+					}
+				});
+				});
+				$( "#mytestwigdet" ).accordion({
+				 	heightStyle: "content",
+				 	collapsible: true,
+				 	active: 0
+					});
+				$( "#mytesttab" ).tabs({
+					event: "mouseover"
+				});
+				$( "#datetab" ).datepicker();
+				$( "#main" ).slider({
+      				value: 60,
+      				orientation: "horizontal",
+      				range: "max",
+      				animate: true
+    			});
+    
+    			$( "#eq > span" ).each(function() {
+      				var value = parseInt( $( this ).text(), 10 );
+      			$( this ).empty().slider({
+        			orientation: "vertical",
+        			value: value,
+        			range: "max",
+        			min: 0,
+      				max: 100,
+        			animate: true
+        			
+      			});
+    		});
+    			$( "#slider-vertical" ).slider({
+      				orientation: "vertical",
+      				range: "min",
+      				min: 0,
+      				max: 100,
+      				value: 60,
+      				slide: function( event, ui ) {
+        				$( "#amount" ).val( ui.value );
+      				}
+    			});
+    			$( "#amount" ).val( $( "#slider-vertical" ).slider( "value" ) );
+    			$("#btnClickMe").focus();
+				$("#btnClickMe").click(function(){
+					if($("#exam1").val()=="")
+					{
+						$("#exam1").next().text("Enter the marks between 1-25");
+					}
+					else
+					{
+						$("#exam1").next().text("");
+					}
+					
+					
+					if($("#exam2").val()=="")
+					{
+						$("#exam2").next().text("Enter the marks between 1-25");
+					}
+					else
+					{
+						$("#exam2").next().text("");
+					}
+
+					if($("#project").val()=="")
+					{
+						$("#project").next().text("Enter the marks between 1-100");
+					}
+					else
+					{
+						$("#project").next().text("");
+					}
+
+					$("#output").text("Score of exam1 is "+$("#exam1").val() + " & score of exam2 is " + $("#exam2").val() + " & score of exam3 is" + $("#project").val());
+					
+					
+     				var sumgrade = parseInt($("#exam1").val())+ parseInt($("#exam2").val())+parseInt(($("#project").val()/100)*50 );
+     				
+     				$("#output1").text("Your total is " + sumgrade);
+   
+   
+                if (sumgrade < 60)
+       				{
+       				  $("#output2").text("Grade F");
+      				}
+      				else if  (sumgrade >=60 && sumgrade<=80 )
+      				{
+      				   $("#output2").text("Grade B");
+     				}
+     				else if (sumgrade >=80 && sumgrade<=100)
+     				{
+     				   $("#output2").text("Grade A");
+    				}
+    				else
+     				{
+     				   $("#output2").text("Invalid Result"); 
+     				}
+   			return false; 		
+				});
+			});
+		</script>
+	</head>
+	<style>
+		.sty{
+			background-color: black;
+		}
+		.style{
+		margin: 0-15px;
+		padding: 10px;
+    	background-color: black;
+    	text-align: center;
+    	margin-right: 15px;
+    	margin-left: 15px;
+
+		}
+	</style>
+	<body>
+		<h1>Web Programming 2 - Class 7</h1>
+	<div id="mytestwigdet">
+		<h3>Section 1 (Tabs)</h3>
+		<div>
+    		<p>
+   <div id="mytesttab">
+  <ul>
+    <li><a href="#tabs-1">Dialog</a></li>
+    <li><a href="#tabs-2">Date</a></li>
+  </ul>
+  <div id="tabs-1">
+  	<input type="button" id="btn" value="Click Me">
+    <div id="mydialog" title="Basic dialog">
+  <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+</div>
+<div id="mydialog2" title="Basic dialog">
+  <p>This is the default dialog.</p>
+</div></input>
+  </div>
+  <div id="tabs-2">
+    <p>Date: <input type="text" id="datetab"></p>
+  </div>
+</div>
+    		</p>
+  		</div>
+  		<h3>Section 2 (Images)</h3>
+  		<div>
+    		<img src="images/download.jfif">
+    		<img src="images/download (1).jfif">
+    		<img src="images/download (2).jfif">
+    		<img src="images/download (3).jfif">
+    		<img src="images/download (4).jfif">
+  		</div>
+  		<h3>Section 3 (Form)</h3>
+  		<div>
+    		<form id="calculate" name="calculate" action="join.html" method="get">
+			<label for="exam1">Exam 1</label>
+			<input type="number" id="exam1" min="1" max="25" /><span>(1-25)</span><br>
+
+			<label for="exam2">Exam 2</label>
+			<input type="number" id="exam2" min="1" max="25" / ><span>(1-25)</span><br>
+
+			<label for="project">Exam 3</label>
+			<input type="number" id="project" min="1" max="100" /><span>(1-100 merge as 50% of total marks)</span><br>
+
+			<span id="output"></span>
+			<br>
+			<span id="output1"></span>
+			<br>
+			<span id="output2"></span>
+			<br>
+
+			<input type="button" id="btnClickMe" value="Click button" />
+
+		</form>
+  		</div>
+  		<h3>Section 4 (Sliders)</h3>
+  		<div>
+  			<p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding:4px;">
+  				<span class="ui-icon ui-icon-volume-on" style="float:left; margin:-2px 5px 0 0;"></span>
+  				Master volume
+			</p>
+ 
+			<div id="main" style="width:260px; margin:15px;" class="sty"></div>
+ 
+			<p class="ui-state-default ui-corner-all" style="padding:4px;margin-top:4em;">
+		    	<span class="ui-icon ui-icon-signal" style="float:left; margin:-2px 5px 0 0;"></span>
+			    Graphic EQ
+			</p>
+ 			<br>
+			<div id="eq">
+		    	<span class="style" style="height:260px;">88</span>
+		    	<span class="style" style="height:260px;">77</span>
+  				<span class="style" style="height:260px;">55</span>
+  				<span class="style" style="height:260px;">33</span>
+  				<span class="style" style="height:260px;">40</span>
+  				<span class="style" style="height:260px;">45</span>
+  				<span class="style" style="height:260px;">70</span>
+			</div><br><br><br><br><br><br>
+			<p>
+  				<label for="amount">Volume:</label>
+  				<input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+			</p>
+ 
+			<div id="slider-vertical" style="height:200px;"></div>
+  		</div>
+	
+	
+
+	<!--<footer></footer>-->
+	</body>
+</html>
+
+

@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<title>Web Programming 2 - Class 6</title>
+		<script src="js\jquery-3.4.1.js"></script><script>
+			$(document).ready(function() {
+				$("#btnClickMe").focus();
+				$("#btnClickMe").click(function(){
+					if($("#exam1").val()=="")
+					{
+						$("#exam1").next().text("Enter the marks between 1-25");
+					}
+					else
+					{
+						$("#exam1").next().text("");
+					}
+					
+					
+					if($("#exam2").val()=="")
+					{
+						$("#exam2").next().text("Enter the marks between 1-25");
+					}
+					else
+					{
+						$("#exam2").next().text("");
+					}
+
+					if($("#project").val()=="")
+					{
+						$("#project").next().text("Enter the marks between 1-100");
+					}
+					else
+					{
+						$("#project").next().text("");
+					}
+
+					$("#output").text("Score of exam1 is "+$("#exam1").val() + " & score of exam2 is " + $("#exam2").val() + " & score of exam3 is" + $("#project").val());
+					
+					
+     				var sumgrade = parseInt($("#exam1").val())+ parseInt($("#exam2").val())+parseInt(($("#project").val()/100)*50 );
+     				
+     				$("#output1").text("Your total is " + sumgrade);
+   
+   
+                if (sumgrade < 60)
+       				{
+       				  $("#output2").text("Grade F");
+      				}
+      				else if  (sumgrade >=60 && sumgrade<=80 )
+      				{
+      				   $("#output2").text("Grade B");
+     				}
+     				else if (sumgrade >=80 && sumgrade<=100)
+     				{
+     				   $("#output2").text("Grade A");
+    				}
+    				else
+     				{
+     				   $("#output2").text("Invalid Result"); 
+     				}
+   			return false; 		
+				});
+				
+			});
+		</script>
+	</head>
+	<style>
+		
+	</style>
+	<body>
+		<h1>Web Programming 2 - Class 6</h1>
+		
+		<a href ="about.html">About</a>
+		<a href ="Contact.html">Contact</a>
+		
+		<form id="calculate" name="calculate" action="join.html" method="get">
+			<label for="exam1">Exam 1</label>
+			<input type="number" id="exam1" min="1" max="25" /><span>(1-25)</span><br>
+
+			<label for="exam2">Exam 2</label>
+			<input type="number" id="exam2" min="1" max="25" / ><span>(1-25)</span><br>
+
+			<label for="project">Exam 3</label>
+			<input type="number" id="project" min="1" max="100" /><span>(1-100 merge as 50% of total marks)</span><br>
+
+			<span id="output"></span>
+			<br>
+			<span id="output1"></span>
+			<br>
+			<span id="output2"></span>
+			<br>
+
+			<input type="button" id="btnClickMe" value="Click button" />
+
+		</form>
+		<footer></footer>
+	</body>
+</html>
+
+

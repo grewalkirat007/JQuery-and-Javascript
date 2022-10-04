@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<title>Web Programming 2 - Class 8</title>
+		<script src="js\jquery-3.4.1.js"></script>
+		<script src="js\jquery-ui.js"></script>
+		<link rel="stylesheet" type="text/css" href="css\jquery-ui.css">
+		<script>
+			$( function() {
+				$( "#dragme" ).draggable();
+				$( "#dragme2" ).draggable();
+				$( "#drophere" ).droppable({
+					drop: function( event, ui ) {
+						$( this )
+						.addClass( "changedropstyle" )
+						.find( "p" )
+							.html( "Dropped something!" );
+					}
+				});
+				$( "#sortable1, #sortable2, #sortable3" ).sortable({
+					connectWith: ".connectedSortable"
+				}).disableSelection();
+			});
+		</script>
+	</head>
+	<style>
+		.red{
+			color: red;
+		}
+		.ui-widget-content{
+			width: 100px;
+			height: 100px;
+			padding: 10px;
+			margin: 10px;
+		}
+		.ui-widget-content1{
+			width: 200px;
+			height: 200px;
+			padding: 10px;
+			margin: 10px;
+			border: 1px solid black;
+		}
+		.changedropstyle{
+			background-color: red !important;
+			border: 2px	solid black;
+		}
+		#sortable1, #sortable2, #sortable3{
+			width: 100px;
+			height: 100px;
+			padding: 10px;
+			/* margin: 10px; */
+			padding: 5px 0 0 0;
+			margin: 0 5px 5px 5px;
+		}
+		
+	</style>
+	<body>
+		<h1>Web Programming 2 - Class 8</h1>
+		<div id="dragme" class="ui-widget-content">
+			<p>Drag me around</p>
+		</div>
+		<div id="dragme2" class="ui-widget-content">
+			<p>Drag me around</p>
+		</div>
+		<div id="drophere" class="ui-widget-content1">
+			<p>Drop here</p>
+		</div>
+
+		<ul id="sortable1" class="connectedSortable">
+			<li class="ui-state-default">Item 1</li>
+			<li class="ui-state-default">Item 2</li>
+			<li class="ui-state-highlight">Item 3</li>
+			<li class="ui-state-default">Item 4</li>
+			<li class="ui-state-highlight">Item 5</li>
+		  </ul>
+		   
+		  <ul id="sortable2" class="connectedSortable">
+			<li class="ui-state-default">Item 6</li>
+			<li class="ui-state-highlight">Item 7</li>
+			<li class="ui-state-default">Item 8</li>
+			<li class="ui-state-highlight">Item 9</li>
+			<li class="ui-state-default">Item 10</li>
+		  </ul>
+
+		  <ul id="sortable3" class="connectedSortable">
+			<li class="ui-state-highlight">Item 11</li>
+			<li class="ui-state-default">Item 12</li>
+			<li class="ui-state-highlight">Item 13</li>
+			<li class="ui-state-default">Item 14</li>
+			<li class="ui-state-highlight">Item 15</li>
+		  </ul>
+	</body>
+</html>
+
+

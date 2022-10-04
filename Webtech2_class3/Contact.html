@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css\main.css">
+		<script>
+			function doSomething()
+			{
+				alert("Something happened")
+				return false;
+			}
+			function doanotherthing()
+			{
+				var a = 12;
+				var b = 10;
+				var sum = a + b;
+				var sub = a - b;
+				var mul = a * b;
+				var div = a / b;
+				console.log(sum);
+				console.log(sub);
+				console.log(mul);
+				console.log(div);
+				alert("Something happened again")
+				return false;
+			}
+			function logic()
+			{
+				var textboxvalue = document.getElementById("totalNumber").value;
+				console.log(textboxvalue);
+				
+				if(textboxvalue<50)
+				{
+				document.getElementById("outputValue").innerHTML = "Failed"
+				}
+				else if(textboxvalue>=50 && textboxvalue<59)
+				{
+				document.getElementById("outputValue").innerHTML = " Grade D"
+				}
+				else if(textboxvalue>=59 && textboxvalue<69)
+				{
+				document.getElementById("outputValue").innerHTML = " Grade C"
+				}
+				else if(textboxvalue>=69 && textboxvalue<79)
+				{
+				document.getElementById("outputValue").innerHTML = " Grade B"
+				}
+				else if(textboxvalue>=79 && textboxvalue<89)
+				{
+				document.getElementById("outputValue").innerHTML = " Grade A"
+				}
+				else
+				{
+				document.getElementById("outputValue").innerHTML = " Grade A+"
+				}
+				return false;
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>Hello This is Contact Page</h1>
+		</header>
+		<nav>
+			<a href ="Default.html">Home</a>
+			<a href ="about.html">About</a>
+		</nav>
+		<section>
+			<article>
+				<p>Name:<input type = "text" id="name" name="name" \></p>
+				<p>Email:<input type = "email" id="email" name="email" \></p>
+				<p>Phone:<input type = "phone" id="phone" name="phone" \></p>
+				<p>Enter number:<input type = "number" id="totalNumber" name="totalNumber" \></p>
+				<p><input type = "button" value="click me" onclick="doSomething();" \></p>
+				<p><input type = "button" value="click here also" onclick="doanotherthing();" \></p>
+				<p><input type = "button" value="click again" onclick="logic();" \></p>
+				
+				<p><div id="outputValue" name="outputValue">Output</div></p>
+			</article>
+		</section>
+		
+		<footer>
+			<p>@cestarcollege.com 2020</p>
+		</footer>
+	</body>
+</html>

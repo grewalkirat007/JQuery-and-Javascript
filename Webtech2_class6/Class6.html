@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<HTML>
+	<head>
+		<title>Web Programming 2 - Class 6 - JQuery</title>
+		<script src="js\jquery-3.4.1.js"></script>
+		<style>
+			.Red{
+				color: Red;
+			}
+		</style>
+		<script>
+			$(document).ready(function() {
+				$("#btnClickMe").focus();
+				$("#btnClickMe").click(function(){
+					if($("#txtName").val()=="")
+					{
+						$("#txtName").next().text("Enter Name");
+					}
+					else
+					{
+						$("#txtName").next().text("");
+					}
+					
+					
+					if($("#txtEmail").val()=="")
+					{
+						$("#txtEmail").next().text("Enter Email");
+					}
+					else
+					{
+						$("#txtEmail").next().text("");
+					}
+					
+					$("#output").text($("#txtName").val() + "--" + $("#txtEmail").val());
+				});
+				
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Web Programming 2 - Class 6</h1>
+		
+		<form id="myForm">
+			<label for="txtName">Enter Name</label>
+			<input type="text" id="txtName"/>
+			<span class="Red">*</span>
+			<br/>
+			<label for="txtEmail">Enter Email</label>
+			<input type="text" id="txtEmail"/>
+			<span class="Red">*</span>
+			<br/>
+			<span id="output"></span>
+			<br/>
+			<input type="button" id="btnClickMe" value="Click Me" />
+		
+		
+		</form>
+		
+		<footer>
+			
+		</footer>
+	</body>
+</HTML>

@@ -1,0 +1,16 @@
+What is JQuery?
+JQuery is the framework of javascript.
+
+How to use JQuery in your HTML file and ensure the JQuery is working?
+Link the JQuery file to the main HTML page using src attribute in script tag.
+
+What are the common JQuery Methods and what are the usage of those?
+.focus()
+.value()
+.next()
+$
+#
+.
+
+
+How does selector works in JQuery?
