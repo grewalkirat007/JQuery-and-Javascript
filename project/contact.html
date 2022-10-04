@@ -1,0 +1,256 @@
+<html>
+<head>
+    <title>Contact V3</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script>
+		$( function() {
+		  $( ".widget button" )
+			
+			}).end().eq( 4 ).button( {
+			  icon: "ui-icon-gear",
+			  iconPosition: "top"
+			
+		} );
+    </script>
+    <script>
+		$( function() {
+			$( "#datepicker" ).datepicker();
+		} );
+	</script>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		.custom-padding{
+			position: absolute;
+			width: 100%;
+			opacity: 1;
+		}
+		*{
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		body{
+			-webkit-background-size: cover;
+			background-size: cover;
+			background-position: center center;
+			height: 100vh;
+		}
+		.menu-area li a{
+			text-decoration: none;
+			color: #fff;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			display: block;
+			padding: 0 25px;
+			font-size: 14px;
+			line-height: 30px;
+			position: relative;
+			z-index: 1;
+		}
+		.menu-area li{
+			list-style: none;
+			display: inline-block;
+		}
+		.custom-padding{
+			padding-top: 25px;
+			position: absolute;
+		}
+		a{
+			font-family: Bannikova;
+		}
+		nav{
+			position: relative;
+			padding: 10px 10px 10px 10px;
+			text-align: right;
+			z-index: 1;
+			background: #333;
+			margin: 0 auto;
+			width: calc(100% - 60px);
+		}
+		.logo{
+			width: 18%;
+			height: 10%;
+			float: left;
+			text-transform: uppercase;
+			color: rgb(214, 22, 22);
+			font-size: 25px;
+			text-align: left;
+			padding-left: 2%;
+		}
+		.menu-area li a:hover{
+			background: tomato;
+			color: #fff;
+		}
+		nav:before{
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 100%;
+			border-top: 10px solid #333;
+			border-right: 10px solid #333;
+			border-left: 10px solid transparent;
+			border-bottom: 10px solid transparent;
+		}
+		nav:after{
+			position: absolute;
+			content: '';
+			border-top: 10px solid #333;
+			border-right: 10px solid #333;
+			border-left: 10px solid transparent;
+			border-bottom: 10px solid transparent;
+			top: 100%;
+			right: 0;
+		}
+	</style>
+	<script>
+	$(document).ready(function() { 
+		$("#main").hover(function() { 
+			$(this).css("background-color", "Black"); 
+		}, function() { 
+			$(this).css("background-color", "Red"); 
+		}); 
+	});
+	</script>
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/hamburgers.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/select2.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main1.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	<div class="custom-padding">
+        <nav>
+            <div class="logo"><a href="Project.html" style="color: red;"><u>Gaming-Lab</u></a></div>
+            <ul class="menu-area">
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="signup.html">signup</a></li>
+                <li><a href="rating.html">rate us</a></li>
+                <li><a href="login.html">login</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+	<div class="bg-contact3" style="background-image: url('images/194368.jpg');">
+		<div class="container-contact3">
+			<div class="wrap-contact3">
+				<form class="contact3-form validate-form">
+					<span id="main" class="contact3-form-title">
+                        Contact Us 
+					</span>
+                    <button style="float: right;background-color: white;border: 1px solid black;padding: 0.5vw;border-radius: 0.25vw;">
+                        Info <span class="ui-icon ui-icon-gear"></span>
+                    </button>
+					<div class="wrap-contact3-form-radio">
+						<div class="contact3-form-radio m-r-42">
+							<input class="input-radio3" id="radio1" type="radio" name="choice" value="say-hi" checked="checked">
+							<label class="label-radio3" for="radio1">
+								Say Hi
+							</label>
+						</div>
+
+						<div class="contact3-form-radio">
+							<input class="input-radio3" id="radio2" type="radio" name="choice" value="get-quote">
+							<label class="label-radio3" for="radio2">
+								Get Info Of Games
+							</label>
+						</div>
+					</div>
+
+					<div class="wrap-input3 validate-input" data-validate="Name is required">
+						<input class="input3" type="text" name="name" placeholder="Your Name">
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="wrap-input3 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input3" type="text" id="email" name="email" placeholder="Your Email">
+						<span class="focus-input3" id="email1"></span>
+					</div>
+
+					<div class="wrap-input3 input3-select">
+						<div>
+							<select class="selection-2" name="service">
+								<option>Need Information Of</option>
+								<option>Online Games</option>
+								<option>Offline Games</option>
+								<option>Playstation</option>
+								<option>Xbox</option>
+								<option>PC</option>
+								<option>Mobile</option>
+							</select>
+						</div>
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="wrap-input3 input3-select">
+						<div>
+							<select class="selection-2" name="budget">
+								<option>About</option>
+								<option>Installation</option>
+								<option>Requirement</option>
+								<option>Download</option>
+							</select>
+						</div>
+						<span class="focus-input3"></span>
+					</div>
+
+                    <div class="wrap-input3 input3-select" data-validate = "Valid email is required: ex@abc.xyz">
+                        <!-- <input class="input3" type="text" name="email" placeholder="Your Email"> -->
+                        <input class="input3" type="text" name="date" placeholder="Date" id="datepicker">
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="wrap-input3 validate-input" data-validate = "Message is required">
+						<textarea class="input3" name="message" placeholder="Your Message"></textarea>
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="container-contact3-form-btn">
+						<button class="contact3-form-btn" style="width: 100%;" onclick="return false; ">
+							Submit
+                        </button>
+                    </div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<!-- <script src="js/jquery-3.4.1.js"></script> -->
+<!--===============================================================================================-->
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/select2.js"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+
+
+</body>
+</html>

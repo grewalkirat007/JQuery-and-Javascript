@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project (Gaming)</title>
+	<script src="js\jquery-3.4.1.js"></script>
+	<script src="js\jquery-ui.js"></script>
+	<script src="js\jquery.fullpage.js"></script>
+	<link rel="stylesheet" type="text/css" href="css\jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript">
+		 $( function() {
+			$( "#msg" ).dialog({
+				resizable: false,
+				height: "auto",
+				width: 400,
+				modal: true,
+				buttons: {
+					"Welcome To Main Page": function() {
+						$( this ).dialog( "close" );
+					},
+					"GameTime": function() {
+						window.open('gametime.html');
+						$( this ).dialog( "close" );
+					}
+				}
+			});
+    		$( "#img1" ).draggable();
+    		$( "#img2" ).draggable();
+    		$( "#video1" ).draggable();
+    		$( "#accordion" ).accordion({
+    			heightStyle: "content",
+				collapsible: true,
+				active: false
+    		});
+    	});
+		
+	</script>
+	<script>
+		
+		
+	</script>
+	
+	<script type="text/javascript">
+		$(function () {
+			$("#search").autocomplete({
+				source: ["NNNNAAAAAMMMMMEEEEE","EEEENNNNNTTTTTEEEEERRRRRR","KKKKKAAAAARRRRRRNNNNNEEEEEEE","NNNNNNNNEEEEEEEEEEEE"],
+				minLength: 2
+			});
+		});
+	</script> 
+	
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		.custom-padding{
+			position: fixed;
+			width: 100%;
+			opacity: 1;
+		}
+		
+		h3{
+			background-color: rgb(252, 0, 0);
+			color: yellow;
+		}
+		.style{
+			background-color: rgb(250, 250, 250);
+			color: white;
+			z-index: 1;
+		}
+		*{
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		body{
+			-webkit-background-size: cover;
+			background-size: cover;
+			background-position: center center;
+			height: 100vh;
+		}
+		.menu-area li a{
+			text-decoration: none;
+			color: #fff;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			display: block;
+			padding: 0 25px;
+			font-size: 14px;
+			line-height: 30px;
+			position: relative;
+			z-index: 1;
+		}
+		.menu-area li{
+			list-style: none;
+			display: inline-block;
+		}
+		.custom-padding{
+			padding-top: 25px;
+			position: fixed;
+		}
+		nav{
+			position: relative;
+			padding: 10px 10px 10px 10px;
+			text-align: right;
+			z-index: 1;
+			background: #333;
+			margin: 0 auto;
+			width: calc(100% - 60px);
+		}
+		.logo{
+			width: 15%;
+			height: 10%;
+			float: left;
+			text-transform: uppercase;
+			color: rgb(214, 22, 22);
+			font-size: 25px;
+			text-align: left;
+			padding-left: 2%;
+		}
+		.menu-area li a:hover{
+			background: tomato;
+			color: #fff;
+		}
+		nav:before{
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 100%;
+			border-top: 10px solid #333;
+			border-right: 10px solid #333;
+			border-left: 10px solid transparent;
+			border-bottom: 10px solid transparent;
+		}
+		nav:after{
+			position: absolute;
+			content: '';
+			border-top: 10px solid #333;
+			border-right: 10px solid #333;
+			border-left: 10px solid transparent;
+			border-bottom: 10px solid transparent;
+			top: 100%;
+			right: 0;
+		}
+		.backgrr{
+			background-color: #fff;
+			padding: 2vw;
+			width: 20%;
+			float: left;
+			height: 1000px;
+		}
+		.mainback{
+			width: 80%;
+			padding-left: 5vw;
+			float: left;
+			height: 100px;
+		}
+		#msg{
+			background-color: black;
+			color: red;
+		}
+		.ui-dialog .ui-dialog-titlebar {
+			border:1px;
+			display: none;
+		}
+		.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+			float: center;
+			margin-left: 1vw;
+			margin-right: 1vw;
+		}
+		.ui-autocomplete-loading {
+			background: white url("images/ui-anim_basic_16x16.gif") right center no-repeat;
+		}
+
+		#fullpage{
+			height: 100vh;
+			overflow: hidden;
+		}
+		#fullpage section{
+			height: 100vh;
+		}
+		#fullpage section h1{
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			line-height: 100vh;
+			font-size: 10em;
+			text-transform: uppercase;
+		}
+
+		#fullpage section p{
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			line-height: 5vh;
+			font-size: 1em;
+		}
+		#fullpage section:nth-child(1){
+			background-image: url(images/194110.jpg);
+			-webkit-background-size: cover;
+			background-size: cover;
+			background-position: center center;
+			height: 100vh;
+			color: red;
+		}
+		#fullpage section:nth-child(2){
+			background-image: url(images/194016.jpg);
+			-webkit-background-size: cover;
+			background-size: cover;
+			background-position: center center;
+			height: 100vh;
+		}
+		#fullpage section:nth-child(3){
+			background-image: url(images/194143.jpg);
+			-webkit-background-size: cover;
+			background-size: cover;
+			background-position: center center;
+			height: 100vh;
+		}
+		#fullpage section:nth-child(4){
+			background-image: url(images/194030.jpg);
+			-webkit-background-size: cover;
+			background-size: cover;
+			background-position: center center;
+			height: 100vh;
+		}
+		#fullpage section:nth-child(5){
+			background-image: url(images/194127.jpg);
+			-webkit-background-size: cover;
+			background-size: cover;
+			background-position: center center;
+			height: 100vh;
+		}
+		#fullpage section:nth-child(6){
+			background-image: url(images/193993.jpg);
+			-webkit-background-size: cover;
+			background-size: cover;
+			background-position: center center;
+			height: 100vh;
+		}
+		#fullpage section:nth-child(7){
+			background-image: url(images/194382.jpg);
+			-webkit-background-size: cover;
+			background-size: cover;
+			background-position: center center;
+			height: 100vh;
+		}
+	</style>
+	<script>
+        $(function(){
+            $("#qwe").fadeOut(5000).fadeIn(1000)
+        } );
+    </script>
+</head>
+<body>
+	<div id="msg" class="styll">
+		<center><h1>Welcome to the Gaming-Lab Website</h1>
+		<img src="images/download.jfif">
+		<h3>Click GameTime to play game</h3>
+		</center>
+	</div>
+	  
+	
+	<div id="fullpage">
+		<section>
+			<div class="custom-padding">
+				<nav>
+					<div class="logo"><a href="Project.html" style="color: red;">Gaming-Lab</a></div><!-- <img src="download.jfif" height="100px" width="300px"> -->
+					<ul class="menu-area">
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="signup.html">signup</a></li>
+						<li><a href="rating.html">rate us</a></li>
+						<li><a href="login.html">login</a></li>
+						<li><a href="aboutus.html">About Us</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+						<li><div class="container">
+							<div>
+								<a href="#" class="btn btn-primary" data-action="toggle" data-side="left">
+									<span>search</span>
+								</a>
+							</div>
+						</div></li>
+						<!-- <li><input id="search" size="10"><i class="fa fa-search" style="background-color: white;height: 1.2vw;width: 1.1vw;"></i></li> -->
+					</ul>
+				</nav>
+			</div>
+			<div class="sidebars">
+				<div class="sidebar left">
+					<input id="search" size="10"><i class="fa fa-search" >SEARCH</i>
+				</div>
+			</div>
+			<h1 id="qwe">Gaming</h1>
+		</section>
+		<section>
+			<h1><a href="online.html" style="color: green;">Online games</a></h1>
+		</section>
+		<section>
+			<h1><a href="offline.html">Offline games</a></h1>
+		</section>
+		<section>
+			<h1><a href="playstation.html">playstation</a></h1>
+		</section>
+		<section>
+			<h1><a href="xbox.html">xbox</a></h1>
+		</section>
+		<section>
+			<h1><a href="pc.html">pc</a></h1>
+		</section>
+		<section>
+			<h1><a href="mobile.html">mobile</a></h1>
+		</section>
+	</div>
+	<script type="text/javascript">
+		$('#fullpage').fullpage();
+	</script> 
+	 <!-- -->
+	<link href="css/custom.css" rel="stylesheet">
+        <!-- <script src="js/jquery-1.10.2.min.js"></script> -->
+        <script src="js/jquery.sidebar.js"></script>
+        <script src="js/handlers.js"></script>
+	<!--  -->
+</body>
+</html>
+		<!--https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2F3%2F3d%2FPlayerUnknown%2527s_Battlegrounds_Steam_Logo.jpg&imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FPlayerUnknown%2527s_Battlegrounds&tbnid=h6rkg57R4hke4M&vet=12ahUKEwiC3qXd8oboAhVFZ98KHTikDlkQMygAegUIARCPAg..i&docid=0wzsFQpZZj1SfM&w=460&h=215&q=pubg&hl=en&ved=2ahUKEwiC3qXd8oboAhVFZ98KHTikDlkQMygAegUIARCPAg-->
+		<!--<img src="images/pubg.jfif">-->
+		<!--https://www.google.com/imgres?imgurl=https%3A%2F%2F2014z520vw7j2q4i2nc4lbo5-wpengine.netdna-ssl.com%2Fwp-content%2Fuploads%2F2020%2F01%2FImage-2020-01-07-16-33-48-1365x768.png&imgrefurl=https%3A%2F%2Fwww.pubg.com%2F&tbnid=Gvce6P3gPMDEPM&vet=12ahUKEwiC3qXd8oboAhVFZ98KHTikDlkQMygDegUIARCWAg..i&docid=dm2F8Sp8gvNaEM&w=1365&h=768&q=pubg&hl=en&ved=2ahUKEwiC3qXd8oboAhVFZ98KHTikDlkQMygDegUIARCWAg-->
+		<!--<img src="images/pubgbattle.jfif">-->
+		<!--https://download.mirchistatus.com/files/sfd64/31729/I%20am%20A%20Rider%20-%20Pubg%20Whatsapp%20Status%20Video-(MirchiStatus.com).mp4-->
+		<!--<video width="320" height="240" controls>
+		<source src="video.mp4" type="video/mp4">
+		</video>-->
+		
+		
+		
+		<!-- <button id="button">Click to fade in boxes</button>
+		<button id="bttn">Click to fade out boxes</button><br><br>
+		
+		<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+		<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+		<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+		
+		<p>If you click on the "Hide" button, I will disappear.</p>
+		
+		<button id="hide">Hide</button>
+		<button id="show">Show</button> -->
+		<!-- <article class="mainback">
+			<div id="fullpage">
+				<section><!--<h1>hello</h1> --
+					<div class="style"><!--id="accordion"--
+						<h3><img src="123.jpg" alt="">Gaming</h3>
+						<div class="ui-widget-content">
+							Gaming refers to playing electronic games, whether through consoles, computers, mobile phones or another medium altogether. Gaming is a nuanced term that suggests regular gameplay, possibly as a hobby. Although traditionally a solitary form of relaxation, online multiplayer video games have made gaming a popular group activity as well.
+						</div>
+						<h3>Gamer</h3>
+						<div class="ui-widget-content">
+							A person who is into gaming is often called a gamer or hardcore gamer. A gamer is a hobbyist or individual that enjoys playing various types of digital or online games. Generally, a gamer refers to any kind of gaming enthusiast, but when used in IT, the term refers to those that utilize a full range of electronic or digital games.
+						</div>
+						<h3>Singleplayer Gaming</h3>
+						<div class="ui-widget-content">
+							A single-player video game is a video game where input from only one player is expected throughout the course of the gaming session. A single-player game is usually a game that can only be played by one person, while "single-player mode" is usually a game mode designed to be played by a single-player, though the game also contains multi-player modes.
+						</div>
+						<h3>Multiplayer Gaming</h3>
+						<div  class="ui-widget-content">
+							A multiplayer video game is a video game in which more than one person can play in the same game environment at the same time, either locally or online over the internet. Multiplayer games usually require players to share the resources of a single game system or use networking technology to play together over a greater distance; players may compete against one or more human contestants, work cooperatively with a human partner to achieve a common goal, supervise other players' activity, co-op. Multiplayer games allow players interaction with other individuals in partnership, competition or rivalry, providing them with social communication absent from single-player games.
+						</div>
+					</div>
+				</section>
+				<section>
+					<center><h1>section2</h1></center>
+				</section>
+			</div>
+		</article> -->

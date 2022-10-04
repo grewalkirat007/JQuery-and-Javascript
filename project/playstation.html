@@ -1,0 +1,390 @@
+<html>
+<head>
+    <title>playstiation</title>
+    <script src="js\jquery-3.4.1.js"></script>
+    <script src="js\jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="css\jquery-ui.css">
+
+    <link rel="stylesheet" href="css\website.css" type="text/css" media="screen">
+    <script src="js/jquery.tinycircleslider.min.js"></script>
+    <!-- <script src="js/jquery-1.4.2.min.js"></script> -->
+    <script>
+        $(document).ready(function(){
+			$('#rotatescroll').tinycircleslider({ 
+                interval: true, 
+                snaptodots: true });
+		});
+    </script>
+    <script>
+        $( function() {
+          $( "#accordion" )
+            .accordion({
+                header: "> div > h3",
+                heightStyle: "content",
+			 	collapsible: true,
+			    active: false,
+            })
+            .sortable({
+              axis: "y",
+              handle: "h3",
+              stop: function( event, ui ) {
+                ui.item.children( "h3" ).triggerHandler( "focusout" );
+                $( this ).accordion( "refresh" );
+              }
+            });
+        } );
+        </script>
+    <style>
+        *{
+          box-sizing: border-box;
+        }
+        .custom-padding{
+          position: absolute;
+          width: 100%;
+          opacity: 1;
+        }
+        *{
+          margin: 0;
+          padding: 0;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+        body{
+          -webkit-background-size: cover;
+          background-size: cover;
+          background-position: center center;
+          height: 100vh;
+        }
+        .menu-area li a{
+          text-decoration: none;
+          color: #fff;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          display: block;
+          padding: 0 25px;
+          font-size: 14px;
+          line-height: 30px;
+          position: relative;
+          z-index: 1;
+        }
+        .menu-area li{
+          list-style: none;
+          display: inline-block;
+        }
+        .custom-padding{
+          padding-top: 25px;
+          position: absolute;
+        }
+        a{
+          font-family: Bannikova;
+        }
+        nav{
+          position: relative;
+          padding: 10px 10px 10px 10px;
+          text-align: right;
+          z-index: 1;
+          background: #333;
+          margin: 0 auto;
+          width: calc(100% - 60px);
+        }
+        .logo{
+          width: 18%;
+          height: 10%;
+          float: left;
+          text-transform: uppercase;
+          color: rgb(214, 22, 22);
+          font-size: 25px;
+          text-align: left;
+          padding-left: 2%;
+        }
+        .menu-area li a:hover{
+          background: tomato;
+          color: #fff;
+        }
+        nav:before{
+          position: absolute;
+          content: '';
+          left: 0;
+          top: 100%;
+          border-top: 10px solid #333;
+          border-right: 10px solid #333;
+          border-left: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+        }
+        nav:after{
+          position: absolute;
+          content: '';
+          border-top: 10px solid #333;
+          border-right: 10px solid #333;
+          border-left: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          top: 100%;
+          right: 0;
+        }
+        body{
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Animation properties */
+        .star {
+        animation: star 10s ease-out infinite;
+        }
+        .wars {
+        animation: wars 10s ease-out infinite;
+        }
+        .byline span {
+        animation: spin-letters 10s linear infinite;
+        }
+        .byline {
+        animation: move-byline 10s linear infinite;
+        }
+
+        /* Keyframes */
+        @keyframes star {
+        0% {
+            opacity: 0;
+            transform: scale(1.5) translateY(-0.75em);
+        }
+        20% {
+            opacity: 1;
+        }
+        89% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: translateZ(-1000em);
+        }
+        }
+
+        @keyframes wars {
+        0% {
+            opacity: 0;
+            transform: scale(1.5) translateY(0.5em);
+        }
+        20% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: translateZ(-1000em);
+        }
+        }
+
+        @keyframes spin-letters {
+        0%, 10% {
+            opacity: 0;
+            transform: rotateY(90deg);
+        }
+        30% {
+            opacity: 1;
+        }
+        70%, 86% {
+            transform: rotateY(0);
+            opacity: 1;
+        }
+        95%, 100% {
+            opacity: 0;
+        }
+        }
+
+        @keyframes move-byline {
+        0% {
+            transform: translateZ(5em);
+        }
+        100% {
+            transform: translateZ(0);
+        }
+        }
+
+        /* Make the 3D work on the container */
+        .starwars-demo {
+        perspective: 800px;
+        transform-style: preserve3d;
+        }
+
+        /* General styles and layout */
+        
+
+        .starwars-demo {
+        height: 17em;
+        left: 50%;
+        position: absolute;
+        top: 53%;
+        transform: translate(-50%, -50%);
+        width: 34em;
+        }
+
+        .byline span {
+        display: inline-block;
+        }
+
+        img {
+        width: 100%;
+        }
+
+        .star, .wars, .byline {
+        position: absolute;
+        }
+
+        .star {
+        top: -0.75em;
+        }
+
+        .wars {
+        bottom: -0.5em;
+        }
+
+        .byline {
+        color: rgb(231, 27, 27);
+        font-family: "ITC Serif Gothic", Lato;
+        font-size: 2.25em;
+        left: -2em;
+        letter-spacing: 0.4em;
+        right: -2em;
+        text-align: center;
+        text-transform: uppercase;
+        top: 29%;
+        }
+
+        /*** Media queries for adjusting to different screen sizes ***/
+
+        @media only screen and (max-width: 600px) {
+        .starwars-demo {
+            font-size: 10px;
+        }
+        }
+
+        @media only screen and (max-width: 480px) {
+        .starwars-demo {
+            font-size: 7px;
+        }
+        }
+    </style>
+    <script>
+      var byline = document.getElementById('byline');     // Find the H2
+      bylineText = byline.innerHTML;                                      // Get the content of the H2
+      bylineArr = bylineText.split('');                                   // Split content into array
+      byline.innerHTML = '';                                                      // Empty current content
+
+      var span;                   // Create variables to create elements
+      var letter;
+
+      for(i=0;i<bylineArr.length;i++){                                    // Loop for every letter
+      span = document.createElement("span");                    // Create a <span> element
+      letter = document.createTextNode(bylineArr[i]);   // Create the letter
+      if(bylineArr[i] == ' ') {                                             // If the letter is a space...
+          byline.appendChild(letter);                 // ...Add the space without a span
+      } else {
+              span.appendChild(letter);                       // Add the letter to the span
+          byline.appendChild(span);                   // Add the span to the h2
+      }
+      }
+    </script>
+</head>
+<body>
+
+  <div class="custom-padding" style="margin-top: -120px;">
+    <nav>
+      <div class="logo"><a href="Project.html" style="color: red;"><u>Gaming-Lab</u></a></div>
+      <ul class="menu-area">
+          <li><a href="">Gallery</a></li>
+          <li><a href="signup.html">signup</a></li>
+          <li><a href="rating.html">rate us</a></li>
+          <li><a href="login.html">login</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+
+    <div id="accordion" style="margin-top: 120px;">
+        <div class="group">
+          <h3>Images</h3>
+          <div>
+            <div id="rotatescroll">
+                <div class="viewport">
+                    <ul class="overview">
+                        <li><img src="images/123.jpg" style="margin-top: 20px;margin-left: 20px;height:280px;width:280px;"/></li>
+                        <li><img src="images/194127.jpg" style="margin-top: 20px;margin-left: 20px;height:280px;width:280px;" /></li>
+                        <li><img src="images/19440.jpeg" style="margin-top: 20px;margin-left: 20px;height:280px;width:280px;" /></li>
+                        <li><img src="images/591297.jpg" style="margin-top: 20px;margin-left: 20px;height:280px;width:280px;" /></li>
+                        <li><img src="images/591824.jpg" style="margin-top: 20px;margin-left: 20px;height:280px;width:280px;" /></li>															
+                    </ul>
+                </div>
+                <div class="dot"></div>
+                <div class="overlay"></div>
+                <div class="thumb"></div>
+            </div>
+          </div>
+        </div>
+        <div class="group">
+          <h3>About</h3>
+          <div>
+            <p>The PlayStation (officially abbreviated as PS and commonly known as the PS1 or its codename PSX) is a home video game console developed and marketed by Sony Computer Entertainment. It was first released on 3 December 1994 in Japan, on 9 September 1995 in North America, on 29 September 1995 in Europe, and on 15 November 1995 in Australia, and was the first of the PlayStation lineup of video game consoles. As a fifth generation console, the PlayStation primarily competed with the Nintendo 64 and the Sega Saturn.
+
+              The PlayStation was the first "computer entertainment platform" to ship over 100 million units, which it had reached nine years after its initial launch. In July 2000, a redesigned, slim version called the PS one was released, replacing the original grey console and named appropriately to avoid confusion with its successor, the PlayStation 2.</p>
+          </div>
+        </div>
+        <div class="group">
+          <h3>Game List</h3>
+          <div>
+            <ul>
+              <li>All Star Soccer</li>
+              <li>Attack of the Saucerman</li>
+              <li>Batman: Gotham City Racer</li>
+              <li>Beyblade: Let it Rip!</li>
+              <li>Blazing Dragons</li>
+              <li>Contra: Legacy of War</li>
+              <li>DeviceReign</li>
+              <li>Dragon Ball Z: Idainaru Dragon Ball Densetsu</li>
+              <li>Gallop Racer</li>
+              <li>Herkules</li>
+            </ul>
+          </div>
+        </div>
+        <div class="group">
+          <h3>Installation</h3>
+          <div>
+            <h3>Where can I find my PlayStation Store purchases?</h3>
+            <p>Your most recently downloaded full games are added to the content launcher. If your purchase is not visible on the content launcher, you can find it in your  [Library]. Your Library is arranged with all content grouped together, so if you have purchased DLC, go to the main title to find it.</p>
+              
+            <h3>How do I download games from my PS4 Library?</h3>
+            <p>From the home screen, go to  [Library] and select the 'Purchased' folder.</p>
+            <p>Select the game you want to download. Add-ons can be found in a sub-section within each game.</p>
+            <p>Select ‘Download’ on the content screen.</p>
+            <p>You can check the progress of your downloads in  [Notifications] > [Downloads].</p>
+            
+            <p>‘Play as you Download’ is available on selected games. This function allows you to choose which part of the game you want to download and play first, while the rest of the content downloads in the background.</p>
+            
+            <h3>Can I start downloading games remotely?</h3>
+            <p>When you purchase a game, you can choose to start the download to your PS4 remotely via a web browser. To perform a Remote Download, you must have Automatic Updates switched on.</p>
+            
+            <p>On the Order Confirmation page or the Download List on PlayStation Store, select [Download to your PS4] next to the title you want to download. </p>
+            <p>If Play as you Download is available, select which part of the game you want to play first. </p>
+            <p>Your game will begin downloading automatically. If Automatic Update is not switched on it will begin downloading when you next turn on your PS4 system.</p>
+          </div>
+        </div>
+        <div class="group">
+          <h3>Animation</h3>
+          <div class="starwars-demo" style="width: 800px;height: 600px;">
+            <img src="images/194069.jpg" alt="Wars" class="wars">
+            <h2 class="byline" id="byline">The Force Awakens</h2>
+          </div>
+        </div>
+      </div>
+
+
+    
+      
+    
+
+
+
+</body>
+</html>

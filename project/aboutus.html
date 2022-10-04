@@ -1,0 +1,148 @@
+<html>
+<head>
+    <title>About</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <script src="js/jquery.bxslider.min.js"></script>
+
+    <script>
+
+        $(function(){
+            $('.bxslider').bxSlider({
+                mode: 'fade',
+                captions: true,
+                slideWidth: 400,
+                auto: true,
+                autoStart: true,
+                autoControls: true,
+                stopAutoOnClick: true,
+                infiniteLoop: true,
+            });
+        });
+
+
+    </script>
+    <style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		.custom-padding{
+			position: absolute;
+			width: 100%;
+			opacity: 1;
+		}
+		*{
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		body{
+			-webkit-background-size: cover;
+			background-size: cover;
+			background-position: center center;
+			height: 100vh;
+		}
+		.menu-area li a{
+			text-decoration: none;
+			color: #fff;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			display: block;
+			padding: 0 25px;
+			font-size: 14px;
+			line-height: 30px;
+			position: relative;
+			z-index: 1;
+		}
+		.menu-area li{
+			list-style: none;
+			display: inline-block;
+		}
+		.custom-padding{
+			padding-top: 25px;
+			position: absolute;
+		}
+		a{
+			font-family: Bannikova;
+		}
+		nav{
+			position: relative;
+			padding: 10px 10px 10px 10px;
+			text-align: right;
+			z-index: 1;
+			background: #333;
+			margin: 0 auto;
+			width: calc(100% - 60px);
+		}
+		.logo{
+			width: 18%;
+			height: 10%;
+			float: left;
+			text-transform: uppercase;
+			color: rgb(214, 22, 22);
+			font-size: 25px;
+			text-align: left;
+			padding-left: 2%;
+		}
+		.menu-area li a:hover{
+			background: tomato;
+			color: #fff;
+		}
+		nav:before{
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 100%;
+			border-top: 10px solid #333;
+			border-right: 10px solid #333;
+			border-left: 10px solid transparent;
+			border-bottom: 10px solid transparent;
+		}
+		nav:after{
+			position: absolute;
+			content: '';
+			border-top: 10px solid #333;
+			border-right: 10px solid #333;
+			border-left: 10px solid transparent;
+			border-bottom: 10px solid transparent;
+			top: 100%;
+			right: 0;
+		}
+	</style>
+</head>
+<body>
+    <div class="custom-padding">
+        <nav>
+            <div class="logo"><a href="Project.html" style="color: red;"><u>Gaming-Lab</u></a></div>
+            <ul class="menu-area">
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="signup.html">signup</a></li>
+                <li><a href="rating.html">rate us</a></li>
+                <li><a href="login.html">login</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <center>
+    <h1>About Us</h1>
+
+    <div class="bxslider">
+        <div><img src="images/kiratveer.JPG" title="Kiratveer Singh Grewal C0772969" style="width:400px;height: 500px;"></div>
+        <div><img src="images/lovepreet.jpeg" title="Lovepreet Singh C0752046" style="width:400px;height: 500px;"></div>
+        <div><img src="images/prabhjot.jpeg" title="Prabhjot Singh C0757644" style="width:400px;height: 500px;"></div>
+    </div>
+    </center>
+</body>
+</html>

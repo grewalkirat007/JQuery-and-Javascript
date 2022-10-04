@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Multi-page template</title>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+	<script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.5.js"></script>
+    
+    <style>
+        .nav-glyphish-example .ui-btn { 
+            padding-top: 40px !important; 
+        }
+        .nav-glyphish-example .ui-btn:after { 
+            width: 20px!important; 
+            height: 20px!important; 
+            margin-left: -10px !important;
+            margin-top: 5px; 
+            box-shadow: none!important; 
+            -moz-box-shadow: none!important; 
+            -webkit-box-shadow: none!important; 
+            -webkit-border-radius: 0 !important; 
+            border-radius: 0 !important; 
+        }
+        
+        @media ( min-width: 10em ) {
+
+            /* wrap on wide viewports once open */
+
+            .ui-panel-page-content-open.ui-panel-page-content-position-left {
+                margin-right: 17em;
+            }
+            .ui-panel-page-content-open.ui-panel-page-content-position-right {
+                margin-left: 17em;
+            }
+            .ui-panel-page-content-open {
+                width: auto;
+            }
+
+            /* disable "dismiss" on wide viewports */
+            .ui-panel-dismiss {
+                display: none;
+            }
+
+            /* same as the above but for panels with display mode "push" only */
+
+            .ui-panel-page-content-open.ui-panel-page-content-position-left.ui-panel-page-content-display-push {
+                margin-right: 17em;
+            }
+            .ui-panel-page-content-open.ui-panel-page-content-position-right.ui-panel-page-content-display-push {
+                margin-left: 17em;
+            }
+            .ui-panel-page-content-open.ui-panel-page-content-display-push {
+                width: auto;
+            }
+
+            .ui-panel-dismiss-display-push {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div data-role="page" id="main" data-theme="b">
+
+	<div data-role="header" class="nav-glyphish-example" data-theme="b" >
+        <h1>Welcome To<br> Gaming-Lab</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#Project" id="chat" data-icon="comment">Home</a></li>
+                <li><a href="#Gallery" id="skull" data-icon="grid">Gallery</a></li>
+                <li><a href="#Games" id="beer" data-icon="grid">Games</a></li>
+                <li><a href="#About" id="coffee" data-icon="grid">About</a></li>
+                <li><a href="#Contact" id="email" data-icon="mail">Contact</a></li>
+            </ul>
+        </div>
+	</div>
+
+	<div role="main" class="ui-content">
+		<h2>Home</h2>
+
+		<p><img src="images/download.jfif"></p>
+		
+        <div data-role="collapsibleset" data-theme="b" data-content-theme="b">
+            <div data-role="collapsible">
+                <h3>Online</h3>
+                <p>Content</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>Offline</h3>
+                <p>Content</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>Playstation</h3>
+                <p>Content</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>Xbox</h3>
+                <p>Content</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>Pc</h3>
+                <p>Content</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>Mobile</h3>
+                <p>Content</p>
+            </div>
+        </div>
+    </div>
+
+	<div data-role="footer" data-theme="b">
+		<div data-role="navbar">
+            <ul>
+                <li><a href="#Project" id="chat" data-icon="comment">Next Page</a></li>
+            </ul>
+        </div>
+	</div>
+</div>
+
+<div data-role="page" id="Project" data-theme="b">
+
+	<div data-role="header">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#main" id="chat" data-icon="comment">Home</a></li>
+                <li><a href="#Gallery" id="skull" data-icon="grid">Gallery</a></li>
+                <li><a href="#Games" id="beer" data-icon="grid">Games</a></li>
+                <li><a href="#About" id="coffee" data-icon="grid">About</a></li>
+                <li><a href="#Contact" id="email" data-icon="mail">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    
+	<div role="main" class="ui-content">
+		<h2>Project</h2>
+		<form>
+            <fieldset data-role="collapsible">
+                <legend>Legend</legend>
+                <label for="textinput-f">Text Input:</label>
+                <input type="text" name="textinput-f" id="textinput-f" placeholder="Text input" value="">
+                <div data-role="controlgroup">
+                    <input type="checkbox" name="checkbox-1-a" id="checkbox-1-a">
+                    <label for="checkbox-1-a">One</label>
+                    <input type="checkbox" name="checkbox-2-a" id="checkbox-2-a">
+                    <label for="checkbox-2-a">Two</label>
+                    <input type="checkbox" name="checkbox-3-a" id="checkbox-3-a">
+                    <label for="checkbox-3-a">Three</label>
+                </div>
+            </fieldset>
+        </form>
+		<p><a href="#main" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to page "one"</a></p>
+	</div>
+
+	<div data-role="footer">
+		<div data-role="navbar">
+            <ul>
+                <li><a href="#main" id="chat" data-icon="comment">Previous Page</a></li>
+                <li><a href="#Gallery" id="email" data-icon="mail">Next Page</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="Gallery" data-theme="b">
+    
+	<div data-role="header">
+		<div data-role="navbar">
+            <ul>
+                <li><a href="#Project" id="chat" data-icon="comment">Home</a></li>
+                <li><a href="#Gallery" id="skull" data-icon="grid">Gallery</a></li>
+                <li><a href="#Games" id="beer" data-icon="grid">Games</a></li>
+                <li><a href="#About" id="coffee" data-icon="grid">About</a></li>
+                <li><a href="#Contact" id="email" data-icon="mail">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    
+	<div role="main" class="ui-content">
+		<h2>Gallery</h2>
+		<a href="#a" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/18639.jpg" style="width:30%"></a>
+        <a href="#b" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/193993.jpg" style="width:30%"></a>
+        <a href="#c" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/19440.jpeg" style="width:30%"></a>
+        <a href="#d" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/591297.jpg" style="width:30%"></a>
+        <a href="#e" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/194143.jpg" style="width:30%"></a>
+        <a href="#f" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/194110.jpg" style="width:30%"></a>
+        <div data-role="popup" id="a" data-overlay-theme="b" data-theme="b" data-corners="false">
+            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/18639.jpg" style="max-height:512px;">
+        </div>
+        <div data-role="popup" id="b" data-overlay-theme="b" data-theme="b" data-corners="false">
+            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/193993.jpg" style="max-height:512px;">
+        </div>
+        <div data-role="popup" id="c" data-overlay-theme="b" data-theme="b" data-corners="false">
+            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/19440.jpeg" style="max-height:512px;">
+        </div>
+        <div data-role="popup" id="d" data-overlay-theme="b" data-theme="b" data-corners="false">
+            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/591297.jpg" style="max-height:512px;">
+        </div>
+        <div data-role="popup" id="e" data-overlay-theme="b" data-theme="b" data-corners="false">
+            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/194143.jpg" style="max-height:512px;">
+        </div>
+        <div data-role="popup" id="f" data-overlay-theme="b" data-theme="b" data-corners="false">
+            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/194110.jpg" style="max-height:512px;">
+        </div>
+	</div>
+
+	<div data-role="footer">
+		<div data-role="navbar">
+            <ul>
+            <li><a href="#Project" id="beer" data-icon="grid">Previous Page</a></li>
+            <li><a href="#Games" id="skull" data-icon="grid">Next Page</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="Games" data-theme="b">
+
+    <div data-role="header">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#Project" id="chat" data-icon="comment">Home</a></li>
+                <li><a href="#Gallery" id="skull" data-icon="grid">Gallery</a></li>
+                <li><a href="#Games" id="beer" data-icon="grid">Games</a></li>
+                <li><a href="#About" id="coffee" data-icon="grid">About</a></li>
+                <li><a href="#Contact" id="email" data-icon="mail">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div role="main" class="ui-content">
+        <h2>Games</h2>
+        <h4>Website from where you can download games:</h4>
+        <p><a href="http://store.steampowered.com/">Steam</a></p>
+        <p><a href="http://gog.com/">GOG</a></p>
+        <p><a href="https://www.g2a.com/r/user-5daf71f34f63c">G2A</a></p>
+        <p><a href="https://www.origin.com/hkg/en-us/store">Origin</a></p>
+        <p><a href="http://www2.ea.com/pc-download">PC Games</a></p>
+        <p><a href="http://oceanofgames.com/">Ocean Of Games</a></p>
+        <p><a href="http://games.softpedia.com/">Softpedia</a></p>
+        <p><a href="https://www.skidrowreloaded.com/">Skidrow Reloaded</a></p>
+    </div>
+
+    <div data-role="footer">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#Gallery" id="email" data-icon="mail">Previous Page</a></li>
+                <li><a href="#About" id="skull" data-icon="grid">Next Page</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="About" data-theme="b">
+
+	<div data-role="header">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#Project" id="chat" data-icon="comment">Home</a></li>
+                <li><a href="#Gallery" id="skull" data-icon="grid">Gallery</a></li>
+                <li><a href="#Games" id="beer" data-icon="grid">Games</a></li>
+                <li><a href="#About" id="coffee" data-icon="grid">About</a></li>
+                <li><a href="#Contact" id="email" data-icon="mail">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    
+	<div role="main" class="ui-content">
+		<h2>About</h2>
+		<div data-role="tabs" id="tabs">
+          <div data-role="navbar">
+            <ul>
+                <li><a href="#one" data-ajax="false">Kiratveer Singh Grewal</a></li>
+                <li><a href="#two" data-ajax="false">Lovepreet Singh</a></li>
+                <li><a href="#three" data-ajax="false">Prabhjot Singh</a></li>
+            </ul>
+          </div>
+          <div id="one" class="ui-body-d ui-content">
+            <h1>Name:</h1>
+            <h1>Kiratveer Singh Grewal</h1>
+            <img src="images/kiratveer.JPG" alt="" height="40%" width="35%">
+          </div>
+          <div id="two" class="ui-body-d ui-content" style="margin-left: 35%;">
+            <h1>Name:</h1>
+            <h1>Lovepreet Singh</h1>
+            <img src="images/lovepreet.jpeg" alt="" height="60%" width="50%">
+          </div>
+          <div id="three" class="ui-body-d ui-content" style="margin-left: 65%;">
+            <h1>Name:</h1>
+            <h1>Prabhjot Singh</h1>
+            <img src="images/prabhjot.jpeg" alt="" height="80%" width="80%">
+          </div>
+        </div>
+	</div>
+
+	<div data-role="footer">
+        <div data-role="navbar">
+            <ul>
+            <li><a href="#Games" id="beer" data-icon="grid">Previous Page</a></li>
+            <li><a href="#Contact" id="skull" data-icon="grid">Next Page</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="Contact" data-theme="b">
+
+	<div data-role="header">
+		<div data-role="navbar">
+            <ul>
+                <li><a href="#Project" id="chat" data-icon="comment">Home</a></li>
+                <li><a href="#Gallery" id="skull" data-icon="grid">Gallery</a></li>
+                <li><a href="#Games" id="beer" data-icon="grid">Games</a></li>
+                <li><a href="#About" id="coffee" data-icon="grid">About</a></li>
+                <li><a href="#Contact" id="email" data-icon="mail">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    
+	<div role="main" class="ui-content">
+		<h2>Contact Us</h2>
+		<form>
+            <label for="textinput-f">Enter Your Name:</label>
+            <input type="text" name="textinput-f" id="textinput-f" placeholder="Name" value="">
+            <label for="controlgroup">Which Page You Liked</label>
+            <div data-role="controlgroup">
+                <input type="checkbox" name="checkbox-7-a" id="checkbox-7-a">
+                <label for="checkbox-7-a">Online</label>
+                <input type="checkbox" name="checkbox-8-a" id="checkbox-8-a">
+                <label for="checkbox-8-a">Offline</label>
+                <input type="checkbox" name="checkbox-9-a" id="checkbox-9-a">
+                <label for="checkbox-9-a">Playstation</label>
+                <input type="checkbox" name="checkbox-4-a" id="checkbox-4-a">
+                <label for="checkbox-4-a">Xbox</label>
+                <input type="checkbox" name="checkbox-5-a" id="checkbox-5-a">
+                <label for="checkbox-5-a">Pc</label>
+                <input type="checkbox" name="checkbox-6-a" id="checkbox-6-a">
+                <label for="checkbox-6-a">Mobile</label>
+            </div>
+            <label for="slider-flip-m">Liked Our Site:</label>
+            <select name="slider-flip-m" id="slider-flip-m" data-role="slider" data-mini="true">
+                <option value="off">No</option>
+                <option value="on" selected="">Yes</option>
+            </select>
+            <label for="slider">Rating:</label>
+            <input type="range" name="slider" id="slider" value="0" min="0" max="5">
+            <input type="submit" value="Submit" onclick="return false;">
+        </form>
+	</div>
+
+	<div data-role="footer">
+		<div data-role="navbar">
+            <ul>
+                <li><a href="#About" id="email" data-icon="mail">Previous Page</a></li>
+                <li><a href="#main" id="chat" data-icon="comment">Home</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

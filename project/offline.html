@@ -1,0 +1,250 @@
+
+<!doctype html>
+<html>
+<head>
+    <script src="js\jquery.3.3.1.min.js"></script>
+    <script src="js\jquery-ui.js"></script>
+    <link rel="stylesheet" href="css\jquery-ui.css">
+    <link rel="stylesheet" href="css/hw-parallax.min.css">
+    <style type="text/css">
+    *{
+        box-sizing: border-box;
+    }
+    .custom-padding{
+        position: fixed;
+        width: 100%;
+        opacity: 1;
+    }
+    h3{
+        background-color: rgb(252, 0, 0);
+        color: yellow;
+    }
+    .style{
+        background-color: rgb(250, 250, 250);
+        color: white;
+        z-index: 1;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .menu-area li a{
+        text-decoration: none;
+        color: #fff;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        display: block;
+        padding: 0 25px;
+        font-size: 14px;
+        line-height: 30px;
+        position: relative;
+        z-index: 1;
+    }
+    .menu-area li{
+        list-style: none;
+        display: inline-block;
+    }
+    .custom-padding{
+        padding-top: 10px;
+        position: fixed;
+        padding-right: 5vw;
+    }
+    nav{
+        position: relative;
+        padding: 10px 10px 10px 10px;
+        text-align: right;
+        z-index: 1;
+        background: #333;
+        margin: 0 auto;
+        width: calc(100% - 60px);
+    }
+    .logo{
+        width: 15%;
+        height: 10%;
+        float: left;
+        text-transform: uppercase;
+        color: rgb(214, 22, 22);
+        font-size: 25px;
+        text-align: left;
+        padding-left: 2%;
+    }
+    .menu-area li a:hover{
+        background: tomato;
+        color: #fff;
+    }
+    nav:before{
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 100%;
+        border-top: 10px solid #333;
+        border-right: 10px solid #333;
+        border-left: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+    }
+    nav:after{
+        position: absolute;
+        content: '';
+        border-top: 10px solid #333;
+        border-right: 10px solid #333;
+        border-left: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        top: 100%;
+        right: 0;
+    }
+    /**/
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    html,body {
+      height: 100%;
+    }
+    body {
+      font-family: Helvetica, sans-serif;
+      color: #fff;
+    }
+    #bg-section, #tile-section {
+      font-size: 2em;
+      font-weight: bold;
+      text-shadow: 2px 2px rgba(0,0,0, 0.5);
+      box-sizing: border-box;
+      padding: 1em;
+      min-height: 100%;
+    }
+    #separator-section {
+      color: #000;
+      padding: 4em;
+    }
+    p, h2 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+  </style>
+  <script> 
+    $(document).ready(function() { 
+        $("#basic4").click(function() { 
+            $("#basic4").hide(); 
+        }); 
+    });  
+</script>
+  <title>offline games</title>
+</head>
+<body>
+<section id="bg-section" class="parallax" data-image="images/592021.jpg" data-width="2560" data-height="1600">
+    <div class="custom-padding">
+        <nav>
+            <div class="logo"><a href="Project.html" style="color: red;">Gaming-Lab</a></div>
+            <ul class="menu-area">
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="signup.html">signup</a></li>
+                <li><a href="rating.html">rate us</a></li>
+                <li><a href="login.html">login</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br><br><br>
+    <h1 align="center" style="color: darkred;">OFFLINE GAMES</h1>
+  <p></p>
+<!-- <script type="text/javascript" src="js/f.js"> -->
+</script>
+
+</section>
+
+<section id="tile-section" class="parallax" data-tile="images/591824.jpg">
+  <section id="basic"> 
+    <div style="position: relative;" class="square fleft">
+    <h3 id="basic1" class="square color1" style="position: absolute; margin-left: 0;text-align: center;width: 500px;" data-trans="translateX(500px)">Batman</h3>
+
+  
+    </div>
+  </section>
+</section>
+<section id="bg-section" class="parallax" data-image="images/mario.jpg" data-width="2560" data-height="1600">
+  <section id="basic"> 
+    <div>
+    <h3 id="basic4" style="position: absolute; margin-left: 0;text-align: center;width: 500px;">Mario</h3>
+    </div>
+  </section>
+</section>
+<section id="tile-section" class="parallax" data-tile="images/17065.jpeg">
+    
+</section>
+
+<script src="js/jquery.transform2d.js"></script>
+	<script type="text/javascript" src="js/prettify.js"></script>
+	<script>
+		$(function() {
+			prettyPrint();
+			
+			$('#basic').delegate('.square', 'mouseenter', function() {
+				if ( !$(this).queue("fx").length ) {
+					$(this).animate({
+						transform: $(this).data('trans')
+					}).rewind();
+				}
+			}); 
+			
+			var transforms = [
+					'scale(.66) skewY(-45deg)',
+					'translate(20px) scale(.66) skewY(-45deg)',
+					'translate(150px,50px) scale(1.5,1)',
+					'translate(280px) scale(.66) skewY(45deg)',
+					'translate(300px) scale(.66) skewY(45deg)'
+				],
+				$squares = $('#basic5678 .square').each(function(i) {
+					$(this).css({ transform: transforms[i] });
+				});
+			$('#basic5678').mouseenter(function() {
+				$squares.each(function(i) {
+					$(this).animate({ transform: transforms[i+1] });
+				});
+			}).mouseleave(function() {
+				$squares.each(function(i) {
+					$(this).animate({ transform: transforms[i] });
+				});
+			});
+			$.fn.rewind = function() {
+				return this.each(function() {
+					$(this).delay(
+						2000
+					).queue(function() {
+						$(this).css('opacity', .5).dequeue();
+					}).animate({
+						transform: ''
+					}).queue(function() {
+						$(this).css('opacity', 1).dequeue();
+					});
+				})
+			};
+		});
+	</script>
+
+<script src="js/hw-parallax.min.js"></script>
+<script>
+  $('.parallax').parallax({
+    scroll_factor: 0.5,
+	image_attr: 'image'
+  });
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<html>
+<head>
+  <title>Gametime</title>
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/descrambler.js"></script>
+  <script src="js/main1.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/style1.css">
+  <style>
+  body { font-family:'Roboto Condensed'}
+  #sortable { list-style-type: none; margin: 0; padding: 0; width: 450px; }
+  #sortable li { margin: 3px 3px 3px 0; padding: 1px; float: left; width: 100px; height: 90px; font-size: 4em; text-align: center; }
+  </style>
+
+<script>
+    $( function() {
+      $( "#sortable" ).sortable();
+      $( "#sortable" ).disableSelection();
+    } );
+    </script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="input-section">
+      <input type="text" class="input" placeholder="Type Stuff. Press Enter." maxlength=50>
+      <div class="buttons-box">
+        <div class="input button" value="scramble">scramble</div>
+        <div class="input button" value="options">options</div>
+      </div>
+      <div class="options-box">
+        <div class="options-group">
+          <label for="duration">duration</label>
+          <br>
+          <input type="range" class="duration" value="3000" min="200" max="20000">
+          <br>
+          <label for="interval">interval</label>
+          <br>
+          <input type="range" class="interval" value="20" min="5" max="1000">
+          <br>
+          <form class="radio-buttons">
+            <label for="uppercase">uppercase</label>
+            <br>
+            <input type="radio" name="uppercase" value="true" checked="checked">true</br>
+            <input type="radio" name="uppercase" value="false">false</br>
+          </form>
+        </div>
+        <div class="options-group">
+          <form class="radio-buttons">
+            <label for="character-set">character set</label><br>
+            <input type="radio" name="character-set" value="all">all<br>
+            <input type="radio" name="character-set" value="alphabet" checked="checked">alphabet<br>
+            <input type="radio" name="character-set" value="numbers">numbers<br>
+            <input type="radio" name="character-set" value="alphanumeric">alphanumeric<br>
+            <input type="radio" name="character-set" value="punctuation">punctuation<br>
+          </form>
+        </div>
+      </div>
+      <p class="notice"></p>
+    </div>
+    <p class="scramble">Enter Your Favourite Game Name To DeScramble</p>
+   
+  </div>
+  <div>
+    <center>
+        <h1>Arrange In Order</h1>
+        <ul id="sortable">
+            <li class="ui-state-default">8</li>
+            <li class="ui-state-default">2</li>
+            <li class="ui-state-default">12</li>
+            <li class="ui-state-default">4</li>
+            <li class="ui-state-default">10</li>
+            <li class="ui-state-default">7</li>
+            <li class="ui-state-default">5</li>
+            <li class="ui-state-default">3</li>
+            <li class="ui-state-default">9</li>
+            <li class="ui-state-default">6</li>
+            <li class="ui-state-default">11</li>
+            <li class="ui-state-default">1</li>
+        </ul>
+    </center>
+  </div>
+  
+</body>
+
+</html>
